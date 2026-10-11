@@ -22,6 +22,9 @@ public static class SessionStorageExtension
     public static async Task<T> ReadEncryptedItem<T>(this ISessionStorageService sessionStorageService, string key)
     {
         var base64Json = await sessionStorageService.GetItemAsync<string>(key);
+        if (string.IsNullOrWhiteSpace(base64Json))
+            return default;
+
         var itemJsonBytes = Convert.FromBase64String(base64Json);
         var itemJson = Encoding.UTF8.GetString(itemJsonBytes);
         var item = JsonSerializer.Deserialize<T>(itemJson);
