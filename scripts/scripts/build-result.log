@@ -1,0 +1,36 @@
+  DocumentService.Api -> D:\TH_Kien_Truc_May_Tinh\th1\DocumentService.Api\bin\Debug\net9.0\DocumentService.Api.dll
+  DocumentService -> D:\TH_Kien_Truc_May_Tinh\th1\DocumentService\bin\Debug\net9.0\DocumentService.dll
+  DocumentService.Test -> D:\TH_Kien_Truc_May_Tinh\th1\DocumentService.Test\bin\Debug\net9.0\DocumentService.Test.dll
+  AuthService.Api -> D:\TH_Kien_Truc_May_Tinh\th1\AuthService.Api\bin\Debug\net9.0\AuthService.Api.dll
+  AuthService -> D:\TH_Kien_Truc_May_Tinh\th1\AuthService\bin\Debug\net9.0\AuthService.dll
+  AuthService.Test -> D:\TH_Kien_Truc_May_Tinh\th1\AuthService.Test\bin\Debug\net9.0\AuthService.Test.dll
+  ChatService.Api -> D:\TH_Kien_Truc_May_Tinh\th1\ChatService.Api\bin\Debug\net9.0\ChatService.Api.dll
+  ChatService -> D:\TH_Kien_Truc_May_Tinh\th1\ChatService\bin\Debug\net9.0\ChatService.dll
+  ChatService.Test -> D:\TH_Kien_Truc_May_Tinh\th1\ChatService.Test\bin\Debug\net9.0\ChatService.Test.dll
+  PaymentService.Api -> D:\TH_Kien_Truc_May_Tinh\th1\PaymentService.Api\bin\Debug\net8.0\PaymentService.Api.dll
+  PaymentService -> D:\TH_Kien_Truc_May_Tinh\th1\PaymentService\bin\Debug\net9.0\PaymentService.dll
+  PaymentService.Test -> D:\TH_Kien_Truc_May_Tinh\th1\PaymentService.Test\bin\Debug\net8.0\PaymentService.Test.dll
+  PolicySearchService.Api -> D:\TH_Kien_Truc_May_Tinh\th1\PolicySearchService.Api\bin\Debug\net8.0\PolicySearchService.Api.dll
+  PolicySearchService -> D:\TH_Kien_Truc_May_Tinh\th1\PolicySearchService\bin\Debug\net8.0\PolicySearchService.dll
+  PolicySearchService.Test -> D:\TH_Kien_Truc_May_Tinh\th1\PolicySearchService.Test\bin\Debug\net8.0\PolicySearchService.Test.dll
+  PolicyService.API -> D:\TH_Kien_Truc_May_Tinh\th1\PolicyService.API\bin\Debug\net8.0\PolicyService.API.dll
+  PolicyService -> D:\TH_Kien_Truc_May_Tinh\th1\PolicyService\bin\Debug\net8.0\PolicyService.dll
+  PolicyService.Test -> D:\TH_Kien_Truc_May_Tinh\th1\PolicyService.Test\bin\Debug\net8.0\PolicyService.Test.dll
+  PricingService.API -> D:\TH_Kien_Truc_May_Tinh\th1\PricingService.API\bin\Debug\net8.0\PricingService.API.dll
+  PricingService -> D:\TH_Kien_Truc_May_Tinh\th1\PricingService\bin\Debug\net8.0\PricingService.dll
+  PricingService.Test -> D:\TH_Kien_Truc_May_Tinh\th1\PricingService.Test\bin\Debug\net8.0\PricingService.Test.dll
+  ProductService.API -> D:\TH_Kien_Truc_May_Tinh\th1\ProductService.API\bin\Debug\net8.0\ProductService.API.dll
+  ProductService -> D:\TH_Kien_Truc_May_Tinh\th1\ProductService\bin\Debug\net8.0\ProductService.dll
+  ProductService.Test -> D:\TH_Kien_Truc_May_Tinh\th1\ProductService.Test\bin\Debug\net8.0\ProductService.Test.dll
+  DashboardService.Api -> D:\TH_Kien_Truc_May_Tinh\th1\DashboardService.Api\bin\Debug\net8.0\DashboardService.Api.dll
+  DashboardService -> D:\TH_Kien_Truc_May_Tinh\th1\DashboardService\bin\Debug\net9.0\DashboardService.dll
+  DashboardService.Test -> D:\TH_Kien_Truc_May_Tinh\th1\DashboardService.Test\bin\Debug\net9.0\DashboardService.Test.dll
+  AgentPortalApiGateway -> D:\TH_Kien_Truc_May_Tinh\th1\AgentPortalApiGateway\AgentPortalApiGateway\bin\Debug\net8.0\AgentPortalApiGateway.dll
+  BlazorWasmClient -> D:\TH_Kien_Truc_May_Tinh\th1\BlazorWasmClient\BlazorWasmClient\bin\Debug\net8.0\BlazorWasmClient.dll
+  BlazorWasmClient (Blazor output) -> D:\TH_Kien_Truc_May_Tinh\th1\BlazorWasmClient\BlazorWasmClient\bin\Debug\net8.0\wwwroot
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:07.34

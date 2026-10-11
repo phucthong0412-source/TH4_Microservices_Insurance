@@ -1,0 +1,153 @@
+name: th1
+
+services:
+  dotnet-agent-portal-gateway:
+    build: 
+      context: ../../
+      dockerfile: AgentPortalApiGateway/AgentPortalApiGateway/Dockerfile
+    image: dotnet-agent-portal-gateway
+    container_name: dotnet-agent-portal-gateway
+    ports:
+    - 8099:8099
+
+  dotnet-auth-service:
+    build: 
+      context: ../../
+      dockerfile: scripts/scripts/Dockerfile.service
+      args:
+        SERVICE: AuthService
+        RUNTIME_VERSION: '9.0'
+    image: dotnet-auth-service
+    container_name: dotnet-auth-service
+    ports:
+    - 6060:6060
+    environment:
+      ASPNETCORE_URLS: http://+:6060
+      ASPNETCORE_ENVIRONMENT: docker
+  
+  dotnet-chat-service:
+    build: 
+      context: ../../
+      dockerfile: scripts/scripts/Dockerfile.service
+      args:
+        SERVICE: ChatService
+        RUNTIME_VERSION: '9.0'
+    image: dotnet-chat-service
+    container_name: dotnet-chat-service
+    ports:
+    - 4099:4099
+    environment:
+      ASPNETCORE_URLS: http://+:4099
+      ASPNETCORE_ENVIRONMENT: docker
+
+  dotnet-payment-service:
+    build: 
+      context: ../../
+      dockerfile: scripts/scripts/Dockerfile.service
+      args:
+        SERVICE: PaymentService
+        RUNTIME_VERSION: '9.0'
+    image: dotnet-payment-service
+    container_name: dotnet-payment-service
+    ports:
+    - 5070:5070
+    environment:
+      ASPNETCORE_URLS: http://+:5070
+      ASPNETCORE_ENVIRONMENT: docker
+
+  dotnet-policy-search-service:
+    build: 
+      context: ../../
+      dockerfile: scripts/scripts/Dockerfile.service
+      args:
+        SERVICE: PolicySearchService
+        RUNTIME_VERSION: '8.0'
+    image: dotnet-policy-search-service
+    container_name: dotnet-policy-search-service
+    ports:
+    - 5065:5065
+    environment:
+      ASPNETCORE_URLS: http://+:5065
+      ASPNETCORE_ENVIRONMENT: docker
+
+  dotnet-policy-service:
+    build: 
+      context: ../../
+      dockerfile: scripts/scripts/Dockerfile.service
+      args:
+        SERVICE: PolicyService
+        RUNTIME_VERSION: '8.0'
+    image: dotnet-policy-service
+    container_name: dotnet-policy-service
+    ports:
+    - 5050:5050
+    environment:
+      ASPNETCORE_URLS: http://+:5050
+      ASPNETCORE_ENVIRONMENT: docker
+
+  dotnet-pricing-service:
+    build: 
+      context: ../../
+      dockerfile: scripts/scripts/Dockerfile.service
+      args:
+        SERVICE: PricingService
+        RUNTIME_VERSION: '8.0'
+    image: dotnet-pricing-service
+    container_name: dotnet-pricing-service
+    ports:
+    - 5040:5040
+    environment:
+      ASPNETCORE_URLS: http://+:5040
+      ASPNETCORE_ENVIRONMENT: docker
+
+  dotnet-product-service:
+    build: 
+      context: ../../
+      dockerfile: scripts/scripts/Dockerfile.service
+      args:
+        SERVICE: ProductService
+        RUNTIME_VERSION: '8.0'
+    image: dotnet-product-service
+    container_name: dotnet-product-service
+    ports:
+    - 5030:5030
+    environment:
+      ASPNETCORE_URLS: http://+:5030
+      ASPNETCORE_ENVIRONMENT: docker
+
+  dotnet-dashboard-service:
+    build: 
+      context: ../../
+      dockerfile: scripts/scripts/Dockerfile.service
+      args:
+        SERVICE: DashboardService
+        RUNTIME_VERSION: '9.0'
+    image: dotnet-dashboard-service
+    container_name: dotnet-dashboard-service
+    ports:
+    - 5035:5035
+    environment:
+      ASPNETCORE_URLS: http://+:5035
+      ASPNETCORE_ENVIRONMENT: docker
+
+  dotnet-web-vue:
+    build: ../../Web/Web
+    image: dotnet-web-vue
+    container_name: dotnet-web-vue
+    ports:
+    - 8080:80
+
+  dotnet-document-service:
+    build:
+      context: ../../
+      dockerfile: scripts/scripts/Dockerfile.service
+      args:
+        SERVICE: DocumentService
+        RUNTIME_VERSION: '9.0'
+    image: dotnet-document-service
+    container_name: dotnet-document-service
+    ports:
+      - 5088:5088
+    environment:
+      ASPNETCORE_URLS: http://+:5088
+      ASPNETCORE_ENVIRONMENT: docker

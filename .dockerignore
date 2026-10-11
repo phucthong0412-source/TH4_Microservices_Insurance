@@ -1,0 +1,12 @@
+**/bin
+**/obj
+**/node_modules
+**/dist
+**/.gradle
+**/build
+.git
+.vs
+Payment_Backup
+postgres/backups
+postgres/data
+*.sln.bak

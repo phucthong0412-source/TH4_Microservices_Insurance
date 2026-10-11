@@ -1,0 +1,14 @@
+# Shared container build for the existing implementation projects.
+ARG RUNTIME_VERSION=9.0
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+ARG SERVICE
+WORKDIR /src
+COPY . .
+RUN dotnet publish "${SERVICE}/${SERVICE}.csproj" -c Release -o /out
+
+FROM mcr.microsoft.com/dotnet/aspnet:${RUNTIME_VERSION} AS final
+ARG SERVICE
+WORKDIR /app
+COPY --from=build /out/ ./
+ENV SERVICE_DLL=${SERVICE}.dll
+ENTRYPOINT ["sh", "-c", "exec dotnet \"$SERVICE_DLL\""]
