@@ -113,13 +113,23 @@ RabbitMQ 3-management và source Eureka của giảng viên. Các implementation
 chưa có Dockerfile dùng chung `Dockerfile.service` để build đúng project
 hiện có và runtime 8/9 tương ứng; giữ Dockerfile Gateway và Web được cung cấp.
 
-Docker Desktop hiện không khởi động Engine được: lỗi tại socket
-`dockerInference`, thông báo `The file cannot be accessed by the system`.
-Chưa chạy thử container, RabbitMQ hoặc Elasticsearch. Không reset Docker,
-không xóa volume và không cài phần mềm hệ thống để tránh ảnh hưởng dữ liệu.
+Docker Engine đã kết nối thành công sau khi người học mở/đăng nhập Docker
+Desktop. Đã chạy RabbitMQ 3.13.7 và Elasticsearch 8.9.2 bằng đúng infra.yml:
+RabbitMQ diagnostics báo `Ping succeeded`, management API trả HTTP 200;
+Elasticsearch trả HTTP 200, cluster health `green`, 1 node.
 
-Sau khi sửa Docker Desktop, dừng PostgreSQL portable trước để giải phóng
-cổng 5432, rồi chạy:
+```powershell
+docker compose -f scripts/scripts/infra.yml up -d rabbitmq elasticsearch
+docker compose -f scripts/scripts/infra.yml ps
+```
+
+RabbitMQ management: http://localhost:15672 (guest/guest), AMQP cổng 5672.
+Elasticsearch API: http://localhost:9200. PostgreSQL portable vẫn chạy ở
+127.0.0.1:5432 và giữ 4 CSDL đã tạo. Chưa chạy PostgreSQL/Eureka bằng
+container; Eureka đã được build và chạy thử riêng bằng JDK 8 portable.
+
+Nếu muốn chạy toàn bộ infra bằng Docker, dừng PostgreSQL portable trước
+để giải phóng cổng 5432, rồi chạy:
 
 ```powershell
 ./scripts/scripts/postgres-local.ps1 -Action Stop
